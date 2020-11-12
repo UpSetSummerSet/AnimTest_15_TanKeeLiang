@@ -20,6 +20,7 @@ public class PlayerController15 : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(Vector3.forward * Time.deltaTime * speed);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
             playerAnim.SetBool("isStrafe", true);
         }
         else if(Input.GetKeyUp(KeyCode.W))
@@ -28,7 +29,8 @@ public class PlayerController15 : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(Vector3.forward * Time.deltaTime * -Bspeed);
+            transform.Translate(Vector3.forward * Time.deltaTime * speed);
+            transform.rotation = Quaternion.Euler(0, 180, 0);
             playerAnim.SetBool("isStrafe", true);
         }
         else if (Input.GetKeyUp(KeyCode.S))
@@ -37,7 +39,8 @@ public class PlayerController15 : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(Vector3.right * Time.deltaTime * -speed);
+            transform.Translate(Vector3.forward * Time.deltaTime * speed);
+            transform.rotation = Quaternion.Euler(0, -90, 0);
             playerAnim.SetBool("isStrafe", true);
         }
         else if (Input.GetKeyUp(KeyCode.A))
@@ -46,7 +49,8 @@ public class PlayerController15 : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(Vector3.right * Time.deltaTime * speed);
+            transform.Translate(Vector3.forward * Time.deltaTime * speed);
+            transform.rotation = Quaternion.Euler(0, 90, 0);
             playerAnim.SetBool("isStrafe", true);
         }
         else if (Input.GetKeyUp(KeyCode.D))
